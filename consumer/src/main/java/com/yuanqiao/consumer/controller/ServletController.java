@@ -3,6 +3,7 @@ package com.yuanqiao.consumer.controller;
 import com.yuanqiao.consumer.dao.WebAjaxApi;
 import com.yuanqiao.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,10 +26,22 @@ public class ServletController {
     @Autowired
     private WebAjaxApi webAjaxApi;
 
+    @Value("${yuanqiao.name}")
+    private  String name;
+    @Value("${yuanqiao.age}")
+    private  String age;
+    @Value("${yuanqiao.sex}")
+    private  String sex;
+
     @GetMapping("/WebAjax/MyServlet")
     public void getUserById(HttpServletRequest request, HttpServletResponse response) {
         ServletOutputStream outputStream=null;
         try {
+            System.out.println(name);
+            System.out.println("----------------------------------");
+            System.out.println(age);
+            System.out.println("----------------------------------");
+            System.out.println(sex);
 //        return restTemplate.postForObject(url,id,User.class);
             User user=new User(1,"yuanqiao","男",27);
 //            String httpServletRequest = webAjaxApi.getUserById("1");

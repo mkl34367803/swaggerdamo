@@ -1,2 +1,24 @@
 server:
   port: 9090
+yuanqiao:
+  name: "zhangsan \n lisi"
+  age: 'zhangsan \n wangwu'
+  sex: lisi \n wangwu
+pets:
+  - cat
+  - dog
+  - pig
+friends: {name: zhangsan,age: 18}
+person:
+  lastName: hello
+  age: 18
+  boss: false
+  birth: 2019/07/21
+  maps: {k1: v1,k2: 12}
+  lists:
+    - lisi
+    - zhaoliu
+  dog:
+    name: 小狗
+    age: 2
+
