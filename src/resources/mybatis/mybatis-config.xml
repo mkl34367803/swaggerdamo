@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- XML 配置文件包含对 MyBatis 系统的核心设置 -->
+<configuration>
+	<settings>
+		<!-- 打印mybatis的sql语句 -->
+		<setting name="logImpl" value="STDOUT_LOGGING" />
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<!-- 如果关联了多张表查询，aggressiveLazyLoading设置为false，则用到那张表就查询那张表，没用到就暂时不查询 
+			如果aggressiveLazyLoading设置为true，那么用到了任何一张表的属性，所有表都会执行sql，进行查询。
+		-->
+		<setting name="aggressiveLazyLoading" value="true"/>
+	</settings>
+</configuration>
